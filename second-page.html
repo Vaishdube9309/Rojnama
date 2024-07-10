@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PC</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 20px;
+    }
+
+    span {
+      color: red;
+    }
+
+    .container1,
+    .container2,
+    .container3,
+    .container4,
+    .container5,
+    .container6,
+    .container7,
+    .container8 {
+      /* border: 1px solid #000; */
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      height: 95vh;
+    }
+    h3{
+      text-align: center;
+
+    }
+    header {
+      /* text-align: center; */
+      margin-bottom: 20px;
+    }
+
+    .sub-header {
+      margin-top: 10px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .row div {
+      display: flex;
+      align-items: center;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    main {
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+ 
+   
+    }
+
+    .table_first{
+      height: 80vh;
+    }
+
+    .table_row{
+      height: 10vh;
+    }
+    td
+       {
+      border: 1px solid #000;
+      padding: 10px;
+      text-align:left;
+      vertical-align: top;
+    }
+
+    
+    th {
+      border: 1px solid #000;
+      padding: 10px;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .photo {
+      border: 1px solid #000;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .signature {
+      text-align: left;
+      margin-top: 40px;
+    }
+
+    .stamp {
+      text-align: right;
+      margin-top: 40px;
+    }
+
+    .photo {
+      border: 1px solid #000;
+      width: 130px;
+      height: 130px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+
+    .form-photo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .photo-label {
+      margin-top: 5px;
+    }
+
+    .questionnaire {
+      margin-top: 20px;
+    }
+
+    .questionnaire p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="./second.js"></script>
+
+  <div class="container1">
+    <div>
+      <h3>
+        विशेष कार्यकारी दंडाधिकारी तथा पोलीस निरीक्षक,<br />
+        स्थानिक गुन्हे शाखा बुलडाणा यांचे कार्यालय
+      </h3>
+      <div class="sub-header">
+        <div class="row">
+          <div>
+            <label for="police_station">पोलीस स्टेशन:</label>
+            <span id="police_station"></span>
+          </div>
+          <div>
+            <label for="case_number">केस क्रमांक:</label>
+            <span id="case_number"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="presenter">जाब देणार:</label>
+            <span id="presenter"></span>
+          </div>
+          <div>
+            <label for="section">कलम:</label>
+            <span id="section"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="fn_number">इस्तगासा क्रमांक:</label>
+            <span id="fn_number"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+
+
+      <table class="table_first">
+        <tr class="table_row">
+          <th>दिनांक</th>
+          <th>कार्यवाही</th>
+          <th>जाब देणार<br />सही/अंगठा</th>
+        </tr>
+        <tr>
+          <td id="date1"></td>
+          <td>
+           <p> आज रोजी जाब देणार हे हजर आले. सदर केसमध्ये जाब देणार यांचा जबाब
+            नोंद करण्यात आला. जबाबात जाब देणार हयांनी सदर केसमध्ये सार्वजनिक
+            शांतता राखणेबाबतचे अंतीम बंधपत्र लिहुन देणेबाबतचा मणोदय व्यक्त
+            केला. अंतीम बंधपत्र संबंधीच्या सर्व अटी मान्य करुन जाब देणार
+            हयांनी विनंती केली. यावरुन जाब देणार हयांना बचावाची संधी म्हणुन
+            पुढील चौकशी तारीख <span id="next_date"></span>निश्चित करण्यात आली आहे. </p> <br>
+        
+
+
+
+            <p>अंतीम बंधपत्र :- दि.<span id="last_date"></span> 
+            आज रोजी जाब देणार हजर आले. आज परत जाब देणार हयांनी सदर केसमध्ये
+            लायक जामीनदारासह अंतीम बंधपत्र लिहुन देण्याची तयारी दर्शविली.
+            यावरुन जाब देणार हयांना Cr.p.c कलम ११२ अन्वये जबाब नोंद करण्यात
+            आला. तसेच जाब देणार हयाने अंतीम बंधपत्राचे मुदतीचे कालावधीत
+            स्वस्थपणा राखावा याकरीता त्यांचे कडुन महीने मुदतीचे दि.<span id="months"></span>
+            पावेतोचे अंतीम बंधपत्र घेण्यात आले. तसेच या कालावधीत जर जाब देणार
+            हयांनी गैरकृत्य केले तर त्याचेसह जामीनदारास सुध्दा जबाबदार धरण्यात
+            येईल. याबाबत समज देण्यात आली. जाब देणार हयाने सदर बाब मान्य
+            केल्याने आज रोजी सदर प्रकरण बंद करण्यात आले आहे. </p>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </main>
+  </div>
+
+
+  <div class="container2">
+    <header>
+      <h3>
+        विशेष कार्यकारी दंडाधिकारी तथा पोलीस निरीक्षक,<br />
+        स्थानिक गुन्हे शाखा बुलडाणा यांचे कार्यालय
+      </h3>
+      <div class="sub-header">
+        <div class="row">
+          <div>
+            <label for="case_number1">केस क्रमांक:</label>
+            <span id="case_number1"></span>
+          </div>
+          <div>
+            <label for="section1">कलम:</label>
+            <span id="section1"></span>
+          </div>
+          <div>
+            <label for="cr_pc">Cr.P.C</label>
+            <span id="photo"></span>
+          </div>
+        </div>
+        <h4>
+          प्राथमिक आदेश <br />
+
+          (कलम १११/११३ सी.आर.पी.सी.अन्वये)
+        </h4>
+      </div>
+    </header>
+
+    <main>
+      <div class="form-group">
+        <div class="form-text">
+          <p>प्रति,</p>
+          <p>श्री. <span id="presenter1"></span></p>
+        </div>
+
+        <div class="form-photo">
+          <label class="photo-label" for="photo">फोटो:</label>
+          <img class="photo"  id="photo1" />
+        </div>
+      </div>
+
+      <p>ज्या अर्थी,</p><br>
+      ठाणेदार <span id="police_station1"></span> यांनी आपल्या विरुध्द इस्तेगाशा
+      क्रमांक.  <span id="fn_number1"></span>,<span id="date1"></span> कलम
+      <span id="section2"></span>सी.आर.पी.सी. अन्वये आमचे कार्यालयात सादर केला असुन सदर
+      इस्तेगाशाचा मजुकर नुसार आपणाकडुन परत कोणत्याही क्षणी सार्वजनिक शांतता व
+      सुव्यवस्था भंग होण्याची शक्यता नाकारता येत नसल्याबाबतचा उल्लेख
+      इस्तेगाशात नमुद आहे.<br>
+      <p> त्याअर्थी,</p> <br>
+
+      <p>आपल्याकडुन<span id="months1"></span> महिन्यांचे मुदती पर्यंत
+        सार्वजनिक शांतता व सुव्यवस्था राखणेबाबत व चांगली वर्तणुक आपण ठेवावी
+        म्हणुन <span id="amount"></span> रु. रकमेच्या जात मुचलक्या सह दोन प्रतिष्ठीत जामीनदारांसह
+        जामीनाचे, तारण द्यावयास आपणांस आदेश द्यावयास का फर्मावु नये? याचे कारण
+        दाखविण्यासाठी तुम्ही जातीने दिनांक दिनांक <span id="next_date1"></span> रोजी १०.०० वाजता आमचे कार्यालयात
+        उपस्थित राहावे. (कलम १११ सी.आर.पी.सी.) मात्र असे करण्यास आपण वाजवी
+        कारणाशिवाय चुकल्यास, <br>
+        आपणास हजर राहण्यास भाग पाडणे कामी आपल्या विरुध्द समन्स अगर वेळ प्रसंगी वारंट काढले जाईल.
+        (कलम ११३ सी.आर.पी.सी.)</p>
+
+
+      <div class="stamp">
+        <p>
+          विशेष कार्यकारी दंडाधिकारी तथा <br>पोलीस निरीक्षक, स्थानिक गुन्हे शाखा,
+          बुलडाणा .
+        </p>
+      </div>
+
+
+      <div class="signature">
+        <p>
+          आदेश मिळणाऱ्यावांत<br />
+          जाब देणाऱ्याची सही
+        </p>
+      </div>
+    </main>
+  </div>
+
+
+  <div class="container3">
+    <header>
+      <h3>विशेष कार्यकारी दंडाधिकारी तथा पोलीस निरीक्षक<br>स्थानिक गुन्हे शाखा बुलडाणा यांचे कार्यालय,</h3>
+      <div class="sub-header">
+        <div>
+          <label for="case_number2">कोर्ट केस नं.:</label>
+          <span id="case_number2"></span>
+        </div>
+
+        <div class="row">
+
+          <h4>भारतीय दंड प्रक्रिया संहिता कलम ११६(३) हे कलम सहित शांती
+            राखण्यासाठीच्या<br>
+            वैयक्तिक मुचलक्याचा फॉर्म</h4>
+        </div>
+      </div>
+    </header>
+    <main>
+      <p>ज्या अर्थी मी जाब देणार <span id="presenter2"></span> , <span id="address"></span>
+        यास कार्यकारी दंडाधिकारी यांचे समक्ष चालू असलेल्या प्रतीबंधक कार्यवाही दरम्यान सार्वजनिक शांतता राखण्यासाठीच्या
+        खालील अटीं वर
+
+      <h4> 1) सार्वजनिक शांतता व सुव्यवस्था राखुण चांगली वर्तवणुक ठेवणेबाबतचे</h4> <br>
+
+      <p>मुचलका देण्यासाठी सांगण्यात आले आहे. त्याअर्थी मी ठरलेल्या कालावधी पर्यंत किंवा नमुद चौकशी पुर्ण होई
+
+        पर्यंत शांततेचा भंग करणार नाही किंवा त्यावर नमुद अटींचे उल्लंघन करणार नाही किंवा शांततेचा भंग होईल असे कुठलेही
+        कृत्य करणार नाही. तसेच वरील अटींचे पालन करीन. सदर अटींचे उल्लंघन झाल्यास शासनास रु. <span id="amount2"></span>
+        इतकी
+        रक्कम देण्याची हमी देतो.</p>
+
+      <p>दिनांक: <span id="last_date"></span></p>
+
+
+
+      <div class="row">
+
+        <div class="stamp">
+          <p>
+            सही किंवा डाव्या हाताचा अंगठा
+          </p>
+        </div>
+
+      </div>
+      </ol>
+      <div>
+        <div class="row">
+          <p> जामीनदाराकडून:<span id="guarantor1"></span> </p>
+
+        </div>
+      </div>
+      <div class="row">
+        <p>वर उल्लेखिलेल्या श्री.<span id="guarantor2"></span> यांच्या आम्ही जामीनदार म्हणून जाहीर करतो की,
+          ठरलेल्या कालावधीत चालू असलेली चौकशी पुर्ण होईपर्यंत
+          तसेच जाब देणाऱ्यांनी शांतता भंग करणार नाही. त्यांना घालून दिलेल्या अटींचे उल्लंघन करणार नाही. त्यांनी जर
+          अटींचे उल्लंघन केल्यास आम्ही संयुक्त रित्या / विभक्त पणे शासनास
+          रु. <span id="amount3"></span> इतकी रक्कम देण्याची हमी देतो.</p>
+
+
+        <p>दिनांक: <span id="last_date"></span></p>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <label for="">सही किंवा डाव्या हाताचा अंगठा</label>
+
+        </div>
+
+
+        <div class="stamp">
+          <p>
+            विशेष कार्यकारी दंडाधिकारी तथा <br>पोलीस निरीक्षक, स्थानिक गुन्हे शाखा,
+            बुलडाणा .
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="container4">
+    <header>
+      <h3>
+        विशेष कार्यकारी दंडाधिकारी तथा पोलीस निरीक्षक<br />
+        स्थानिक गुन्हे शाखा बुलडाणा यांचे कार्यालय ,<br>
+        क्रिमीनल प्रोसीजर कोड कलम ११२ प्रमाणे जबाब
+      </h3>
+      <div class="sub-header">
+        <div class="row">
+          <div>
+            <label for="case_number3">केस क्रमांक:</label>
+            <span id="case_number3"></span>
+          </div>
+          <div>
+            <label for="section3">कलम:</label>
+            <span id="section3"></span>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="presenter3">जाब देणार:</label>
+              <span id="presenter3"></span>
+            </div>
+          </div>
+        </div>
+    </header>
+    <main>
+      <div class="questionnaire">
+        <p><label>प्रश्न:</label> सीआरपीसी कलम १११ अन्वये तुमच्या विरुद्ध काढलेली नोटीस तुम्हास वाचुन व समजावुन
+          सांगितलेली कारणे समजली काय?</p>
+        <p><label>उत्तर:</label> होय</p>
+        <p><label>प्रश्न:</label> सदर नोटीस प्रमाणे तुम्हास कारणे दाखविली काय?</p>
+        <p><label>उत्तर:</label> होय</p>
+        <p><label>प्रश्न:</label> सदर प्रतिवंधक कार्यवाही चौकशी बाबत तुम्हास आणखी काही सांगायाचे आहे काय?</p>
+        <p><label>उत्तर:</label> नाही</p>
+        <p><label>प्रश्न:</label> सदर प्रतिवंधक कार्यवाहीमध्ये आपण फायनल बॉंड करून देण्यास तयार आहे काय?</p>
+        <p><label>उत्तर:</label> होय</p>
+      </div>
+      <div class="row">
+
+
+        <p>दिनांक: <span id="last_date"></span></p>
+      </div>
+
+      <div class="stamp">
+        <p>
+          विशेष कार्यकारी दंडाधिकारी तथा <br>पोलीस निरीक्षक, स्थानिक गुन्हे शाखा,
+          बुलडाणा .
+        </p>
+      </div>
+
+
+      <div class="signature">
+        <p>
+
+          जाब देणाऱ्याची सही
+        </p>
+      </div>
+    </main>
+
+
+
+  </div>
+  </header>
+
+
+  <div class="container5">
+    <header>
+      <h3>
+        अंतीम बंधपत्र | Final Bond]<br>
+        (सार्वजनिक शांतता राखणेबाबत)
+      </h3>
+
+    </header>
+
+    <main>
+      <div class="form-group">
+        <div class="form-text">
+          <p>मी,
+            <span id="recipient"></span>
+          </p>
+        </div>
+
+      </div>
+
+      आज दि.<span id="last_date"></span></p> रोजी मा.विशेष कार्यकारी दंडाधिकारी सा.यांचे विदयमान न्यायालयात माझे विरुध्द
+      चालु असलेली चॅप्टर
+      खटला पुढे चालु ठेवणे नसुन सदर खटल्यात स्वतःहुन व स्वमर्जीने अंतीम बंधपत्र लिहुन देण्याचा विनंती अर्ज सादर करीत
+      आहे. तसेच सदरच्या अंतीम बंधपत्राचा कालावधीत म्हणजे <span id="months3"></span> महीने मुदतीपर्यंत मी कोणत्याही
+      प्रकारे सार्वजनिक शांतता व
+      सुव्यवस्था भंग होईल असे कृत्य करणार नाही. यासाठी मी या बंधपत्राव्दारे स्वःतला बांधुन घेत आहे. सदर कालावधीत जर
+      माझ्याकडुन कोणत्याही प्रकारे सार्वजनिक शांतता व सुव्यवस्थेचा भंग झाल्यास मी माझे जामीनदारासह <span
+        id="amount4"></span>
+      /-रु (प्रत्येकी)
+      सरकार जमा करण्यास सदर बंधपत्राव्दारे स्वतःला बांधुन घेत आहे.
+
+      सदर बंधपत्र मराठीत संगणकीकृत केला असुन मला मराठीत वाचुन हिंदीतुन समजावुन सांगीतला.
+
+
+
+      <div class="stamp">
+        <p>
+          जाब देणाऱ्याची सही.
+        </p>
+      </div>
+
+      <header>
+        <h1>
+          जामीनदाराचे बंधपत्र<br>
+
+        </h1>
+
+      </header>
+
+      <div class="form-group">
+        <div class="form-text">
+
+        </div>
+        <div class="form-photo">
+          <label class="photo-label" for="photo">फोटो:</label>
+          <img  class="photo"  id="photo1" name="photo" />
+        </div>
+      </div>
+
+      मी जामीनदार नामे
+      <span id="guarantor3"></span>
+
+
+
+      उपरोक्त नमुद जाब देणार नामे <span id="recipient"></span>
+      -उक्त अवधीत शांतता भंग करणेस किंवा शांतता भंग होईल असे कोणतेच कृत्य करू नये यासाठी मी/आम्ही याव्दारे स्वतःस
+      जामीनदार म्हणून घोषीत करीत आहे आणि त्याने काही कसुर केल्यास रुपये <span id="amount5"></span>- (प्रत्येकी) इतकी
+      रक्कम
+      जमा वळती सरकार जमा
+      करण्यास स्वतःला संयुक्त / अलगपणे बांधुन घेत आहे. करीता मी / आम्ही आज दि. <span id="last_date"></span></p>
+      रोजी बंधपत्र लिहुन देत आहे.
+      <div class="row">
+
+
+        <p>
+          दिनांक : <span id="last_date"></span></p>
+      </div>
+
+
+      <div class="stamp">
+        <p>
+
+          जामीनदाराची सही / अंगठा
+        </p>
+      </div>
+
+
+
+    </main>
+  </div>
+
+  <div class="container6">
+    <header>
+      <h3>
+        अंतिम बंधपत्र देणेबाबतचा विनंती अर्ज
+      </h3>
+
+    </header>
+
+
+    <main>
+      <div class="form-group">
+        <div class="form-text">
+          <p>प्रति,</p>
+          <p>
+
+            मा. विशेष कार्यकारी दंडाधिकारी,
+            <br> स्थानिक गुन्हे शाखा, बुलडाणा यांचे न्यायालय
+          </p>
+        </div>
+        <div class="form-photo">
+
+        </div>
+      </div> <br>
+
+      <p>कोर्ट केस नं.:<span id="case_number4"></span></p><br>
+
+      <p>फिर्यादि महाराष्ट्र शासन तर्फे :<span id="complainant1"></span></p>
+
+      <p>जाब देणार :- <span id="presenter4"></span></p>
+   
+
+      <p>विरुध्द</p>
+
+      <p>विषय :- सदर चॅप्टर केसमध्ये स्वतःहुन अंतीम बंधपत्र देत असले बाबत.</p>
+
+
+
+      महोदय,
+
+      १)मी वरील प्रकरणातील पोस्ट <span id="police_station2"></span>  खटला क्र. <span id="court_number1"></span>
+
+      कलम ११०/१०७,११६ (३) फै ा.दं.प्र.सं. मधील जाब देणार आहे.
+      
+
+      २) मला फै ा.दं.प्र.सं. कलम १११ अन्वये दिलेली कारणे दाखवा नोटीस समजली आहे.
+
+      ३) मला सदर प्रकरण पूढे चालविणे नसून सदर प्रकरणी अंतिम बंधपत्र देणेस मी स्वतःहून तयार आहे.
+      विनंती की, मी यापूर्वी
+      दिनांक / /२०२३ <span id="months4"></span></p>रोजी दिलेले जामीन यांचे बंधपत्र अंतिम बंधपत्र म्हणून कायम मंजुर होणेस
+      विनंती आहे.
+
+      दिनांक :
+      <div class="stamp">
+        <p>
+          जाब
+          देणार/सही
+          
+        </p>
+      </div>
+
+
+      <h4 style="text-align: center;">मंजुर <br>
+
+        विशेष कार्यकारी दंडाधिकारी<br>
+        तथा <br>
+        पोलीस निरीक्षक, स्थानिक गुन्हे शाखा, बुलडाणा.</h4>
+    </main>
+  </div>
+
+  <div class="container7">
+    <header>
+      <h3>
+        नोटीस <br />
+        (कलम 111 जा.फौ.प्रमाणे)
+      </h3>
+
+    </header>
+    <div class="stamp">
+      <p>
+        विशेष कार्यकारी दंडाधिकारी तथा <br>पोलीस निरीक्षक, स्थानिक गुन्हे शाखा,
+        बुलडाणा .
+      </p>
+    </div>
+
+    <main>
+      <div class="form-group">
+        <div class="form-text">
+          प्रति,  <span id="presenter5"></span> <br>
+
+
+          विषय: कलम 107,116 (3) सीआरपीसी प्रमाणे जामीनाबाबत कारणे दाखवा नोटीस.  <br>
+          संदर्भ : <span id="police_station4"></span> कडील प्रतिवृत्त क्रमांक<span id="fn_number2"></span> कलम <span id="section4"></span>
+          फौ.दं.प्र.सं. <br>
+
+          2) या कोटीचे केस क्रमांक <span id="case_number5"></span>   कलम<span id="section5"></span> <span id="date1"></span>
+         
+        </div>
+
+        <div class="form-photo">
+
+        </div>
+      </div>
+
+       
+
+      <p>महोदय,
+        <br>
+        उपरोक्त विषय व संदर्भान्वय, आपणास  या नोटीसद्वारे कळविण्यात येते की, आपणाविरुध्द <span id="police_station5"></span>
+        येथुन
+        संदर्भ क्र.। अन्वये प्रतिवृत्त सादर केलेले आहे </p>
+
+      <p>सदर प्रतिवृत्ताचे अवलोकन केले असता, दिनांक रोजी साक्षीदार यांनी आपली बैलगाडी नदीचे कठावर सोडली असता आपण
+        साक्षीदार यांना वैलगाडी रस्त्यात का सोडली या कारणावरुन वाद करुन साक्षीदार यांना चापटा बुक्कयांनी मारहाण केली
+        तसेच शिवीगाळ करुन जिवे मारण्याची धमकी दिली. साक्षीदार यांचे आपणाविरुध्दच्या अशा स्वरुपाच्या जवानी तक्रारीवरुन
+        आपणाविरुध्द पो.स्टे. बोराखेडी येथे एन.सी. क्र 08/2023 कलम 323,504,506 भादवी प्रमाणे गुन्हा नोंद करण्यात आलेला
+        आहे</p>
+
+      <p> आपण समाजाचे असुन साक्षीदार हे बौध्द समाजाचे असल्याने आपणाविरुध्द वरील प्रमाणे अखलपात्र
+
+        स्वरूपाचा गुन्हा नोंद करण्यात आलेला आहे. आपणाकडुन परत एखादा गंभीर स्वरुपाचा दखलपात्र गुन्हा घडुन का व सु चा
+        प्रश्न निर्माण होवून सर्वसाधारण जनतेच्या सार्वजनिक शांतता व सुव्यवस्थेस धोका निर्माण होण्याची शक्यता नाकारता
+        येत नाही अशा निष्कर्षाप्रत आम्ही आलो आहोत. </p>
+
+      <p>आपणाकडुन भविष्यात गंभीर स्वरुपाचा दखलपात्र गुन्हा घडु नये या करीता
+        आपणाकडुन शांतता राखण्याविषयी घ्यावयाच्या बंधपत्राची रक्कम रु.<span id="amount6"></span>चे <span
+          id="months5"></span>
+        वर्ष मुदतीसाठी व जामीनकामी एक
+        प्रतिष्ठीत नागरीक
+
+        (जे आपले जवळचे नातेवाईक नसतील) अशा स्वरुपाचे जामीनदार जे आपले वर्तनावर नियंत्रण ठेवु शकतील अशा जामीनदाराचा
+        जामीन आपणाकडुन आज 21-00 वा.पावेतो का घेण्यात येवु नये?
+      <p>तसेच सदर प्रतीबंधक कार्यवाहीबाबत आपणास आपले म्हणने सादर
+        करावयाचे असल्यास आपण आपला स्वयंस्गष्ट लेखी खुलासा न चुकत दिनांक 09-01-2023 रोजी तत्पुर्वी या कार्यालयात सादर
+        करावा.</p>
+
+
+      <div class="stamp">
+        <p>
+          (अशोक लांडे)<br>
+          विशेष कार्यकारी दंडाधिकारी,<br>
+          तथा <br>
+          पोलीस निरीक्षक, स्थानिक गुन्हे शाखा, बुलडाणा
+        </p>
+      </div>
+
+      <header>
+        <h4>
+          ( कलम 112 जा. फौ.प्रमाणे)<br>
+          वरील नोटीस/आदेश मला मराठीतुन/हिंदीतुन वाचून दाखविण्यात आला व त्यातील आशय समजावून सांगण्यात आली. त्याची प्रत
+          मला मिळाली.
+        </h4>
+
+
+        <div class="stamp">
+          <p>
+            सही
+          </p>
+        </div>
+
+    </main>
+  </div>
+
+  <div class="container8">
+    <header>
+      <h3>
+        विशेष कार्यकारी दंडाधिकारी तथा पोलीस निरीक्षक,<br />
+        स्थानिक गुन्हे शाखा बुलडाणा यांचे कार्यालय
+      </h3>
+      <div class="sub-header">
+        <div class="row">
+          <div>
+            <label for="police_station3">पोलीस स्टेशन:</label>
+            <span id="police_station3"></span>
+          </div>
+          <div>
+            <label for="case_number6">केस क्रमांक:</label>
+            <span id="case_number6"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="presenter6">जाब देणार:</label>
+            <span id="presenter6"></span>
+          </div>
+          <div>
+            <label for="section6">कलम:</label>
+            <span id="section6"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="fn_number3">इस्तगासा क्रमांक:</label>
+            <span id="fn_number3"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <table class="table_first">
+        <tr class="table_row">
+          <th>दिनांक</th>
+          <th>कार्यवाही</th>
+          <th>जाब देणार<br />सही/अंगठा</th>
+        </tr>
+        <tr>
+          <td id="date1"></td>
+          <td>
+            नमुद जाब देणार हा उपस्थित झाला आहे. त्याचे विरुध्द क जाफौ प्रमाणे प्रकरण दाखल असुन त्यास फौ.द.प्र.सं. कलम
+            111 अन्वये नोटीस देण्यात आली. ती नोटीस त्यास वाचुन दाखवली व त्यातील आशय त्यास समजावुन सांगण्यात आला.
+
+            सदर प्रकरणाची चौकशी सुरू करण्यात आली असुन व ती संपण्यापुर्वी जाब देणार यांचेकडुन शांतता भंग होण्याचा किंवा
+            सार्वजनिक शांतता भंग होण्याचा व गंभीर अपराध घडण्याची शक्यता आहे. अशी न्यायालयास खात्री झाली असल्याने सदर
+            प्रकरणाची चौकशी संपेपर्यत
+
+            त्याचेकडुन अंतरीम बंधपत्र घेण्यात आले. पुढिल तारीख / <span id="next_date2"></span><br /> ही निश्चित करण्यात
+            आली
+
+            आहे.
+
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </main>
+  </div>
+  </div>
+
+</body>
+
+</html>
